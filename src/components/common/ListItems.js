@@ -1,12 +1,13 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
+import { human } from 'react-native-typography';
 
 const ListItems = ({ rowData, onPress }) => {
 	console.log(rowData);
 
 	return (
 		<View style={styles.todoItem}>
-			<Text style={styles.todoText}>{rowData}</Text>
+			<Text style={[styles.todoText, human.footnote]}>{rowData}</Text>
 			<Button title="Delete" onPress={onPress} style={styles.deleteButton} />
 		</View>
 	);

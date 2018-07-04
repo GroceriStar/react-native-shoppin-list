@@ -1,6 +1,6 @@
 /*eslint-disable no-underscore-dangle*/
 import React, { Component } from 'react';
-import { View, StyleSheet, TextInput, Button, FlatList, Text } from 'react-native';
+import { View, StyleSheet, TextInput, Button, FlatList, StatusBar } from 'react-native';
 
 import ListItems from '../common';
 
@@ -47,6 +47,7 @@ export default class Todo extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
+				<StatusBar barStyle="dark-content" />
 				<View style={styles.formView}>
 					<TextInput
 						style={styles.inputForm}
@@ -75,7 +76,8 @@ const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: 'center',
 		justifyContent: 'center',
-		backgroundColor: '#fff'
+		backgroundColor: '#fff',
+		paddingTop: 25
 	},
 	formView: {
 		borderBottomWidth: 1,
