@@ -1,5 +1,9 @@
 # react-native-shoppin-list
 
+## Screenshots
+
+<img src="assets/SC.png">
+
 ## Expo
 
 you can use the app by scanning the qr code using the Expo app
