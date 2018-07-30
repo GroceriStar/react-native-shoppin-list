@@ -2,7 +2,7 @@
   "main": "node_modules/expo/AppEntry.js",
   "private": true,
   "dependencies": {
-    "@groceristar/groceristar-fetch": "^1.1.10",
+    "@groceristar/groceristar-fetch": "^1.1.13",
     "expo": "^29.0.0",
     "raven-js": "^3.26.4",
     "react": "16.3.1",
