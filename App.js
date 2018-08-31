@@ -1,9 +1,8 @@
 import React from 'react';
-
-import AppMain from './src/AppMain';
+import Main from './src/Main';
 
 export default class App extends React.Component {
 	render() {
-		return <AppMain />;
+		return <Main />;
 	}
 }
