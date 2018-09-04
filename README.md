@@ -4,6 +4,10 @@
 
 <img src="assets/SC.png">
 
+## VIDEO
+
+<a href="/"><img src="./shopping-list.gif" title="made at imgflip.com"/></a>
+
 ## Expo
 
 you can use the app by scanning the qr code using the Expo app
