@@ -8,6 +8,10 @@
 
 <a href="/"><img src="./shopping-list.gif" title="made at imgflip.com"/></a>
 
+# Intro Video
+
+![introslide 1](https://user-images.githubusercontent.com/16745006/45135621-f6a8e800-b1bd-11e8-8aff-7586dab7d1fd.gif)
+
 ## Expo
 
 you can use the app by scanning the qr code using the Expo app
