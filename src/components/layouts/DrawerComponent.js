@@ -50,9 +50,8 @@ export default class DrawerComponent extends Component {
           showIngredients: !item.showIngredients,
           allIngredientsByOneDepartment: IngredientsObject,
         };
-      } else {
-        return item;
       }
+      return item;
     });
     this.setState({
       allDepartments: newAllDepatment,
@@ -76,13 +75,12 @@ export default class DrawerComponent extends Component {
                 </Text>
                 {item.showIngredients ? (
                   <View>
-                    {/* <Text>Ingredient : </Text> */}
                     <FlatList
                       data={item.allIngredientsByOneDepartment}
-                      renderItem={({ item }) => (
+                      renderItem={info => (
                         <View>
                           <Text style={{ padding: 5 }}>
-                            {item.IngredientName}
+                            {info.item.IngredientName}
                           </Text>
                         </View>
                       )}
