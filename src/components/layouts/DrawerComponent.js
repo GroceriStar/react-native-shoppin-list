@@ -10,8 +10,7 @@ import TouchableBounce from 'react-native/Libraries/Components/Touchable/Touchab
 import { createStackNavigator } from 'react-navigation';
 
 import IngredientDetails from './IngredientDetails';
-import gf from '@groceristar/groceristar-fetch/groceristar';
-import uuid from 'uuidv4';
+import { getAllDepartmentList } from '../../HelperFunctions';
 
 class DrawerComponent extends Component {
   static navigationOptions = {
@@ -22,18 +21,14 @@ class DrawerComponent extends Component {
 
   static getDerivedStateFromProps(props, state) {
     if (!state.allDepartments) {
-      const newAllDepartments = gf.getAllDepartments();
-      const newAllDepartmentsObject = newAllDepartments.map(item => ({
-        key: uuid(),
-        departmentName: item,
-      }));
       return {
-        allDepartments: newAllDepartmentsObject,
+        allDepartments: getAllDepartmentList(),
       };
     }
   }
 
   state = {};
+
   render() {
     return (
       <View style={styles.container}>

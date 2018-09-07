@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, FlatList } from 'react-native';
-import gf from '@groceristar/groceristar-fetch/groceristar';
-import uuid from 'uuidv4';
+import { getAllIngredientsList } from '../../HelperFunctions';
 
 let tempName = '';
 export default class IngredientDetails extends Component {
@@ -14,14 +13,8 @@ export default class IngredientDetails extends Component {
     };
   };
   static getDerivedStateFromProps() {
-    const Ingredients = gf.getAllIngredientsByOneDepartment(`${tempName}`);
-    const IngredientsObject = Ingredients.map(item => ({
-      key: uuid(),
-      IngredientName: item,
-    }));
-
     return {
-      departmentIngredients: IngredientsObject,
+      departmentIngredients: getAllIngredientsList(tempName),
     };
   }
   state = {};
