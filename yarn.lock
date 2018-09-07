@@ -451,9 +451,9 @@
     pouchdb-collections "^1.0.1"
     tiny-queue "^0.2.1"
 
-"@groceristar/groceristar-fetch@^1.1.19":
-  version "1.1.19"
-  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-1.1.19.tgz#64ecbc73f2e43fc364f5b0e03ab934f6dea85390"
+"@groceristar/groceristar-fetch@^1.1.21":
+  version "1.1.21"
+  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-1.1.21.tgz#42ccdafa0c339f94db83d4c1bbf2a33b96bfdb43"
   dependencies:
     fs "0.0.1-security"
     lodash "^4.17.10"
@@ -670,6 +670,18 @@ art@^0.10.0:
 asap@~2.0.3:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
+
+assign-deep@^0.4.5:
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/assign-deep/-/assign-deep-0.4.7.tgz#7f66886a0bdae6d652abb1497f6edfc2c7ab14cf"
+  dependencies:
+    assign-symbols "^0.1.1"
+    is-primitive "^2.0.0"
+    kind-of "^5.0.2"
+
+assign-symbols@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/assign-symbols/-/assign-symbols-0.1.1.tgz#cb025944ef4ec8a3693f086e9e112c74e3a0fed9"
 
 assign-symbols@^1.0.0:
   version "1.0.0"
@@ -1711,9 +1723,9 @@ create-react-class@^15.6.3:
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
-create-react-context@^0.2.1:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.2.3.tgz#9ec140a6914a22ef04b8b09b7771de89567cb6f3"
+create-react-context@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.2.2.tgz#9836542f9aaa22868cd7d4a6f82667df38019dca"
   dependencies:
     fbjs "^0.8.0"
     gud "^1.0.0"
@@ -1985,6 +1997,12 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
+eslint-config-prettier@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-3.0.1.tgz#479214f64c1a4b344040924bfb97543db334b7b1"
+  dependencies:
+    get-stdin "^6.0.0"
+
 eslint-config-rallycoding@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/eslint-config-rallycoding/-/eslint-config-rallycoding-3.2.0.tgz#1256f801742ba0e95757680e81fd14ff1dbeff86"
@@ -2038,6 +2056,13 @@ eslint-plugin-jsx-a11y@^2.1.0:
     damerau-levenshtein "^1.0.0"
     jsx-ast-utils "^1.0.0"
     object-assign "^4.0.1"
+
+eslint-plugin-prettier@^2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-2.6.2.tgz#71998c60aedfa2141f7bfcbf9d1c459bf98b4fad"
+  dependencies:
+    fast-diff "^1.1.1"
+    jest-docblock "^21.0.0"
 
 eslint-plugin-react-native-globals@^0.1.1:
   version "0.1.2"
@@ -2285,6 +2310,10 @@ fancy-log@^1.3.2:
     color-support "^1.1.3"
     time-stamp "^1.0.0"
 
+fast-diff@^1.1.1:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/fast-diff/-/fast-diff-1.1.2.tgz#4b62c42b8e03de3f848460b639079920695d0154"
+
 fast-levenshtein@~2.0.4:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
@@ -2316,7 +2345,7 @@ fbjs-scripts@^0.8.1:
     semver "^5.1.0"
     through2 "^2.0.0"
 
-fbjs@^0.8.0, fbjs@^0.8.14, fbjs@^0.8.16, fbjs@^0.8.4, fbjs@^0.8.9:
+fbjs@^0.8.0, fbjs@^0.8.14, fbjs@^0.8.4, fbjs@^0.8.9:
   version "0.8.17"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   dependencies:
@@ -2513,6 +2542,10 @@ generate-object-property@^1.1.0:
 get-caller-file@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.2.tgz#f702e63127e7e231c160a80c1554acb70d5047e5"
+
+get-stdin@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-6.0.0.tgz#9e09bf712b360ab9225e812048f71fde9c89657b"
 
 get-stream@^3.0.0:
   version "3.0.0"
@@ -2994,6 +3027,10 @@ jest-docblock@22.4.0:
   dependencies:
     detect-newline "^2.1.0"
 
+jest-docblock@^21.0.0:
+  version "21.2.0"
+  resolved "https://registry.yarnpkg.com/jest-docblock/-/jest-docblock-21.2.0.tgz#51529c3b30d5fd159da60c27ceedc195faf8d414"
+
 jest-docblock@^22.4.0:
   version "22.4.3"
   resolved "https://registry.yarnpkg.com/jest-docblock/-/jest-docblock-22.4.3.tgz#50886f132b42b280c903c592373bb6e93bb68b19"
@@ -3099,7 +3136,7 @@ kind-of@^4.0.0:
   dependencies:
     is-buffer "^1.1.5"
 
-kind-of@^5.0.0:
+kind-of@^5.0.0, kind-of@^5.0.2:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-5.1.0.tgz#729c91e2d857b7a419a1f9aa65685c4c33f5845d"
 
@@ -4003,6 +4040,10 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
+prettier@^1.14.2:
+  version "1.14.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.14.2.tgz#0ac1c6e1a90baa22a62925f41963c841983282f9"
+
 pretty-format@^21.2.1:
   version "21.2.1"
   resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-21.2.1.tgz#ae5407f3cf21066cd011aa1ba5fce7b6a2eddb36"
@@ -4036,7 +4077,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1:
+prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
   dependencies:
@@ -4070,9 +4111,9 @@ range-parser@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.0.tgz#f49be6b487894ddc40dcc94a322f611092e00d5e"
 
-raven-js@^3.26.4:
-  version "3.26.4"
-  resolved "https://registry.yarnpkg.com/raven-js/-/raven-js-3.26.4.tgz#32aae3a63a9314467a453c94c89a364ea43707be"
+raven-js@^3.27.0:
+  version "3.27.0"
+  resolved "https://registry.yarnpkg.com/raven-js/-/raven-js-3.27.0.tgz#9f47c03e17933ce756e189f3669d49c441c1ba6e"
 
 rc@^1.2.7:
   version "1.2.8"
@@ -4108,6 +4149,17 @@ react-mixin@^2.0.2:
   dependencies:
     object-assign "^2.0.0"
     smart-mixin "^1.2.0"
+
+react-native-app-intro-slider@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-app-intro-slider/-/react-native-app-intro-slider-1.0.1.tgz#712bf3dc1d66b3432bf4092971db4dfc01b916bd"
+
+react-native-app-intro@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-app-intro/-/react-native-app-intro-1.1.5.tgz#34a2d2265b2d654d31bae743c404856c37448692"
+  dependencies:
+    assign-deep "^0.4.5"
+    react-native-swiper "git+https://github.com/FuYaoDe/react-native-swiper.git"
 
 react-native-branch@2.2.5:
   version "2.2.5"
@@ -4154,12 +4206,6 @@ react-native-reanimated@1.0.0-alpha.3:
   version "1.0.0-alpha.3"
   resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-1.0.0-alpha.3.tgz#42983aa41911791cd3186fd3a18a788c3d4c3601"
 
-react-native-safe-area-view@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.7.0.tgz#38f5ab9368d6ef9e5d18ab64212938af3ec39421"
-  dependencies:
-    hoist-non-react-statics "^2.3.1"
-
 react-native-safe-area-view@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.9.0.tgz#10ece2ecac70e7005a5b0b3f06c8833060e6d21f"
@@ -4179,6 +4225,13 @@ react-native-svg@6.2.2:
     color "^2.0.1"
     lodash "^4.16.6"
     pegjs "^0.10.0"
+
+"react-native-swiper@git+https://github.com/FuYaoDe/react-native-swiper.git":
+  version "1.4.4"
+  uid a6417ff41a8b2d490bdcc4541015ab35736d4595
+  resolved "git+https://github.com/FuYaoDe/react-native-swiper.git#a6417ff41a8b2d490bdcc4541015ab35736d4595"
+  dependencies:
+    react-timer-mixin "^0.13.3"
 
 react-native-tab-view@^0.0.77:
   version "0.0.77"
@@ -4288,26 +4341,25 @@ react-navigation-drawer@0.5.0:
   dependencies:
     react-native-drawer-layout-polyfill "^1.3.2"
 
-react-navigation-stack@0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/react-navigation-stack/-/react-navigation-stack-0.2.3.tgz#9d1e2524aa1d178302c938948b8ece49d713f12b"
+react-navigation-stack@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/react-navigation-stack/-/react-navigation-stack-0.3.0.tgz#cdd056771e5fd12114811824653b1ec7e9ae5de1"
 
-react-navigation-tabs@0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/react-navigation-tabs/-/react-navigation-tabs-0.6.0.tgz#2f526194f4360e56c2702e736887449acc2080dc"
+react-navigation-tabs@0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/react-navigation-tabs/-/react-navigation-tabs-0.7.0.tgz#c89d41e501043f7fdb38550de85814452c3e6104"
   dependencies:
     hoist-non-react-statics "^2.5.0"
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
-    react-native-safe-area-view "^0.7.0"
     react-native-tab-view "^1.0.0"
 
-react-navigation@^2.6.2:
-  version "2.12.1"
-  resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-2.12.1.tgz#17122a4162cd5a65d79814385cd61c2c0cb7ebb5"
+react-navigation@^2.13.0:
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-2.13.0.tgz#7102ff7cbc492c8daf2ad90fc80463c3469f8b78"
   dependencies:
     clamp "^1.0.1"
-    create-react-context "^0.2.1"
+    create-react-context "0.2.2"
     hoist-non-react-statics "^2.2.0"
     path-to-regexp "^1.7.0"
     query-string "^6.1.0"
@@ -4315,8 +4367,8 @@ react-navigation@^2.6.2:
     react-native-safe-area-view "^0.9.0"
     react-navigation-deprecated-tab-navigator "1.3.0"
     react-navigation-drawer "0.5.0"
-    react-navigation-stack "0.2.3"
-    react-navigation-tabs "0.6.0"
+    react-navigation-stack "0.3.0"
+    react-navigation-tabs "0.7.0"
 
 react-proxy@^1.1.7:
   version "1.1.8"
@@ -4329,6 +4381,10 @@ react-timer-mixin@^0.13.2:
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/react-timer-mixin/-/react-timer-mixin-0.13.3.tgz#0da8b9f807ec07dc3e854d082c737c65605b3d22"
 
+react-timer-mixin@^0.13.3:
+  version "0.13.4"
+  resolved "https://registry.yarnpkg.com/react-timer-mixin/-/react-timer-mixin-0.13.4.tgz#75a00c3c94c13abe29b43d63b4c65a88fc8264d3"
+
 react-transform-hmr@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/react-transform-hmr/-/react-transform-hmr-1.0.4.tgz#e1a40bd0aaefc72e8dfd7a7cda09af85066397bb"
@@ -4336,14 +4392,14 @@ react-transform-hmr@^1.0.4:
     global "^4.3.0"
     react-proxy "^1.1.7"
 
-react@16.3.1:
-  version "16.3.1"
-  resolved "http://registry.npmjs.org/react/-/react-16.3.1.tgz#4a2da433d471251c69b6033ada30e2ed1202cfd8"
+react@16.5.0:
+  version "16.5.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.5.0.tgz#f2c1e754bf9751a549d9c6d9aca41905beb56575"
   dependencies:
-    fbjs "^0.8.16"
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    prop-types "^15.6.0"
+    prop-types "^15.6.2"
+    schedule "^0.3.0"
 
 read-pkg-up@^2.0.0:
   version "2.0.0"
@@ -4588,6 +4644,12 @@ sax@^1.2.4:
 sax@~1.1.1:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.1.6.tgz#5d616be8a5e607d54e114afae55b7eaf2fcc3240"
+
+schedule@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/schedule/-/schedule-0.3.0.tgz#1be2ab2fc2e768536269ce7326efb478d6c045e8"
+  dependencies:
+    object-assign "^4.1.1"
 
 "semver@2 || 3 || 4 || 5", semver@5.x, semver@^5.0.1, semver@^5.0.3, semver@^5.1.0, semver@^5.3.0, semver@^5.4.1:
   version "5.5.0"
