@@ -9,9 +9,9 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import Login from './Login';
 import SignUp from './SignUp';
 import Home from './Home';
-import DrawerComponent from './DrawerComponent';
 import Place from './Place';
 import Account from './Account';
+import DrawerComponent from './DrawerComponent';
 
 const tab = createBottomTabNavigator(
   {

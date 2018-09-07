@@ -7,10 +7,13 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import TouchableBounce from 'react-native/Libraries/Components/Touchable/TouchableBounce';
+import { createStackNavigator } from 'react-navigation';
+
+import IngredientDetails from './IngredientDetails';
 import gf from '@groceristar/groceristar-fetch/groceristar';
 import uuid from 'uuidv4';
 
-export default class DrawerComponent extends Component {
+class DrawerComponent extends Component {
   static navigationOptions = {
     header: null,
     title: 'Drawer',
@@ -23,8 +26,6 @@ export default class DrawerComponent extends Component {
       const newAllDepartmentsObject = newAllDepartments.map(item => ({
         key: uuid(),
         departmentName: item,
-        showIngredients: false,
-        allIngredientsByOneDepartment: [],
       }));
       return {
         allDepartments: newAllDepartmentsObject,
@@ -33,31 +34,6 @@ export default class DrawerComponent extends Component {
   }
 
   state = {};
-
-  handleallIngredientsByOneDepartment = ({ departmentName, key }) => {
-    const Ingredients = gf.getAllIngredientsByOneDepartment(
-      `${departmentName}`
-    );
-    const IngredientsObject = Ingredients.map(item => ({
-      key: uuid(),
-      IngredientName: item,
-    }));
-    const allDepatment = [...this.state.allDepartments];
-    const newAllDepatment = allDepatment.map(item => {
-      if (item.key === key) {
-        return {
-          ...item,
-          showIngredients: !item.showIngredients,
-          allIngredientsByOneDepartment: IngredientsObject,
-        };
-      }
-      return item;
-    });
-    this.setState({
-      allDepartments: newAllDepatment,
-    });
-  };
-
   render() {
     return (
       <View style={styles.container}>
@@ -67,26 +43,16 @@ export default class DrawerComponent extends Component {
           data={this.state.allDepartments}
           renderItem={({ item }) => (
             <TouchableOpacity
-              onPress={() => this.handleallIngredientsByOneDepartment(item)}
+              onPress={() =>
+                this.props.navigation.navigate('Ingredients', {
+                  departmentName: item.departmentName,
+                })
+              }
             >
               <View style={{ backgroundColor: '#ffde9e', margin: 10 }}>
                 <Text style={{ padding: 10, backgroundColor: '#f4b942' }}>
                   {item.departmentName}
                 </Text>
-                {item.showIngredients ? (
-                  <View>
-                    <FlatList
-                      data={item.allIngredientsByOneDepartment}
-                      renderItem={info => (
-                        <View>
-                          <Text style={{ padding: 5 }}>
-                            {info.item.IngredientName}
-                          </Text>
-                        </View>
-                      )}
-                    />
-                  </View>
-                ) : null}
               </View>
             </TouchableOpacity>
           )}
@@ -105,3 +71,13 @@ const styles = StyleSheet.create({
     paddingLeft: 30,
   },
 });
+
+export default createStackNavigator(
+  {
+    Deparment: { screen: DrawerComponent },
+    Ingredients: { screen: IngredientDetails },
+  },
+  {
+    initialRouteName: 'Deparment',
+  }
+);
