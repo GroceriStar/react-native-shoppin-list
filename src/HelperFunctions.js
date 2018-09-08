@@ -20,3 +20,21 @@ export const getAllIngredientsList = DeparmentName => {
 
   return IngredientsObject;
 };
+
+export const getAllGrocery = () => {
+  const grocery = gf.getGrocery();
+  const GroceryObjectArray = grocery.map(item => ({
+    key: uuid(),
+    IngredientName: item,
+  }));
+  return GroceryObjectArray;
+};
+
+export const getAllGroceryDepartment = (departmentArray) => {
+  const departmentArrayObject = departmentArray.map(item => ({
+    key: uuid(),
+    departmentName: item,
+  }));
+  return departmentArrayObject;
+};
+

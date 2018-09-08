@@ -4,7 +4,7 @@ import {
   createSwitchNavigator,
   createBottomTabNavigator,
 } from 'react-navigation';
-import Ionicons from '@expo/vector-icons/Ionicons';
+import { Ionicons } from '@expo/vector-icons';
 
 import Login from './Login';
 import SignUp from './SignUp';
@@ -12,12 +12,14 @@ import Home from './Home';
 import Place from './Place';
 import Account from './Account';
 import DrawerComponent from './DrawerComponent';
+import Grocery from './Grocery';
 
 const tab = createBottomTabNavigator(
   {
     home: Home,
     drawer: DrawerComponent,
     place: Place,
+    grocery: Grocery,
     account: Account,
   },
   {
@@ -33,6 +35,8 @@ const tab = createBottomTabNavigator(
           iconName = `ios-pin${focused ? '' : '-outline'}`;
         } else if (routeName === 'account') {
           iconName = `ios-person${focused ? '' : '-outline'}`;
+        } else if (routeName === 'grocery') {
+          iconName = `ios-cart${focused ? '' : '-outline'}`;
         }
         return <Ionicons name={iconName} size={25} color={tintColor} />;
       },
