@@ -1,33 +1,35 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, FlatList } from 'react-native';
-import { getAllIngredientsList } from '../../HelperFunctions';
+import { View, Text, StyleSheet, FlatList } from 'react-native';
+import { getAllGroceryDepartment } from '../../HelperFunctions';
 
 let tempName = '';
-export default class IngredientDetails extends Component {
+class GroceryList extends Component {
   static navigationOptions = ({ navigation }) => {
-    const departmentName = navigation.state.params.departmentName;
-    tempName = departmentName;
+    const { departments, name } = navigation.state.params.departmentNameArray;
+    tempName = departments;
     return {
-      title: departmentName,
+      title: name,
       drawerLabel: '',
     };
   };
+
   static getDerivedStateFromProps() {
     return {
-      departmentIngredients: getAllIngredientsList(tempName),
+      departmentNameObject: getAllGroceryDepartment(tempName),
     };
   }
   state = {};
+
 
   render() {
     return (
       <View style={styles.container}>
         <FlatList
-          data={this.state.departmentIngredients}
+          data={this.state.departmentNameObject}
           renderItem={info => (
             <View>
               <Text style={{ fontSize: 25, color: 'white', padding: 5 }}>
-                  {info.item.IngredientName}
+                 {info.item.departmentName}
               </Text>
             </View>
           )}
@@ -36,6 +38,7 @@ export default class IngredientDetails extends Component {
     );
   }
 }
+export default GroceryList;
 
 const styles = StyleSheet.create({
   container: {
