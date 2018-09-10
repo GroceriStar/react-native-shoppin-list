@@ -16,6 +16,7 @@ export const getAllIngredientsList = DeparmentName => {
   const IngredientsObject = Ingredients.map(item => ({
     key: uuid(),
     IngredientName: item,
+    isChecked: false,
   }));
 
   return IngredientsObject;
@@ -30,11 +31,11 @@ export const getAllGrocery = () => {
   return GroceryObjectArray;
 };
 
-export const getAllGroceryDepartment = (departmentArray) => {
+export const getAllGroceryDepartment = departmentArray => {
   const departmentArrayObject = departmentArray.map(item => ({
     key: uuid(),
     departmentName: item,
+    isChecked: false,
   }));
   return departmentArrayObject;
 };
-

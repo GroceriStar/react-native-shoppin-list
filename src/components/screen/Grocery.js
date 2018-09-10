@@ -1,52 +1,40 @@
 import React, { Component } from 'react';
 import {
   View,
+  Text,
   StyleSheet,
   FlatList,
-  Text,
   TouchableOpacity,
 } from 'react-native';
 import TouchableBounce from 'react-native/Libraries/Components/Touchable/TouchableBounce';
 import { createStackNavigator } from 'react-navigation';
+import { getAllGrocery } from '../../HelperFunctions';
+import GroceryList from '../layouts/GroceryList';
 
-import IngredientDetails from './IngredientDetails';
-import { getAllDepartmentList } from '../../HelperFunctions';
-
-class DrawerComponent extends Component {
+class Grocery extends Component {
   static navigationOptions = {
     header: null,
-    title: 'Drawer',
+    title: 'Grocery',
     tabBarButtonComponent: TouchableBounce,
   };
-
-  static getDerivedStateFromProps(props, state) {
-    if (!state.allDepartments) {
-      return {
-        allDepartments: getAllDepartmentList(),
-      };
-    }
-  }
-
-  state = {};
-
   render() {
     return (
       <View style={styles.container}>
         <FlatList
           onEndReached={this.handle}
           onEndReachedThreshold={0}
-          data={this.state.allDepartments}
+          data={getAllGrocery()}
           renderItem={({ item }) => (
             <TouchableOpacity
               onPress={() =>
-                this.props.navigation.navigate('Ingredients', {
-                  departmentName: item.departmentName,
+                this.props.navigation.navigate('groceryList', {
+                  departmentNameArray: item.IngredientName,
                 })
               }
             >
               <View style={{ backgroundColor: '#ffde9e', margin: 10 }}>
                 <Text style={{ padding: 10, backgroundColor: '#f4b942' }}>
-                  {item.departmentName}
+                  {item.IngredientName.name}
                 </Text>
               </View>
             </TouchableOpacity>
@@ -69,10 +57,10 @@ const styles = StyleSheet.create({
 
 export default createStackNavigator(
   {
-    Deparment: { screen: DrawerComponent },
-    Ingredients: { screen: IngredientDetails },
+    grocery: { screen: Grocery },
+    groceryList: { screen: GroceryList },
   },
   {
-    initialRouteName: 'Deparment',
+    initialRouteName: 'grocery',
   }
 );

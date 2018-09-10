@@ -8,11 +8,11 @@ import { Ionicons } from '@expo/vector-icons';
 
 import Login from './Login';
 import SignUp from './SignUp';
-import Home from './Home';
-import Place from './Place';
-import Account from './Account';
-import DrawerComponent from './DrawerComponent';
-import Grocery from './Grocery';
+import Home from '../screen/Home';
+import Account from '../screen/Account';
+import Grocery from '../screen/Grocery';
+import DrawerComponent from '../screen/DrawerComponent';
+import Place from '../screen/Place';
 
 const tab = createBottomTabNavigator(
   {

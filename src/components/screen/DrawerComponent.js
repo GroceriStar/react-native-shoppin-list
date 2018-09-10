@@ -1,35 +1,52 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  FlatList,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 import TouchableBounce from 'react-native/Libraries/Components/Touchable/TouchableBounce';
 import { createStackNavigator } from 'react-navigation';
-import { getAllGrocery } from '../../HelperFunctions';
-import GroceryList from './GroceryList';
 
-class Grocery extends Component {
+import { getAllDepartmentList } from '../../HelperFunctions';
+import IngredientDetails from '../layouts/IngredientDetails';
+
+class DrawerComponent extends Component {
   static navigationOptions = {
     header: null,
-    title: 'Grocery',
+    title: 'Drawer',
     tabBarButtonComponent: TouchableBounce,
   };
-  render() {
-    console.log(getAllGrocery());
 
+  static getDerivedStateFromProps(props, state) {
+    if (!state.allDepartments) {
+      return {
+        allDepartments: getAllDepartmentList(),
+      };
+    }
+  }
+
+  state = {};
+
+  render() {
     return (
       <View style={styles.container}>
         <FlatList
           onEndReached={this.handle}
           onEndReachedThreshold={0}
-          data={getAllGrocery()}
+          data={this.state.allDepartments}
           renderItem={({ item }) => (
             <TouchableOpacity
-            onPress={() =>
-              this.props.navigation.navigate('groceryList', {
-                departmentNameArray: item.IngredientName,
-              })}
+              onPress={() =>
+                this.props.navigation.navigate('Ingredients', {
+                  departmentName: item.departmentName,
+                })
+              }
             >
               <View style={{ backgroundColor: '#ffde9e', margin: 10 }}>
                 <Text style={{ padding: 10, backgroundColor: '#f4b942' }}>
-                  {item.IngredientName.name}
+                  {item.departmentName}
                 </Text>
               </View>
             </TouchableOpacity>
@@ -52,10 +69,10 @@ const styles = StyleSheet.create({
 
 export default createStackNavigator(
   {
-    grocery: { screen: Grocery },
-    groceryList: { screen: GroceryList },
+    Deparment: { screen: DrawerComponent },
+    Ingredients: { screen: IngredientDetails },
   },
   {
-    initialRouteName: 'grocery',
+    initialRouteName: 'Deparment',
   }
 );

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import { View, StyleSheet, FlatList } from 'react-native';
+import { CheckBox } from 'react-native-elements';
+
 import { getAllGroceryDepartment } from '../../HelperFunctions';
 
 let tempName = '';
@@ -20,6 +22,20 @@ class GroceryList extends Component {
   }
   state = {};
 
+  handleCheck = departmentName => {
+    const oldState = [...this.state.departmentNameObject];
+    const newState = oldState.map(item => {
+      if (item.departmentName === departmentName) {
+        item.isChecked = !item.isChecked;
+        return item;
+      }
+      return item;
+    });
+
+    this.setState({
+      departmentNameObject: newState,
+    });
+  };
 
   render() {
     return (
@@ -28,9 +44,11 @@ class GroceryList extends Component {
           data={this.state.departmentNameObject}
           renderItem={info => (
             <View>
-              <Text style={{ fontSize: 25, color: 'white', padding: 5 }}>
-                 {info.item.departmentName}
-              </Text>
+              <CheckBox
+                title={info.item.departmentName}
+                checked={info.item.isChecked}
+                onPress={() => this.handleCheck(info.item.departmentName)}
+              />
             </View>
           )}
         />

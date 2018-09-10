@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, FlatList } from 'react-native';
+import { View, StyleSheet, FlatList } from 'react-native';
+import { CheckBox } from 'react-native-elements';
+
 import { getAllIngredientsList } from '../../HelperFunctions';
 
 let tempName = '';
@@ -19,6 +21,21 @@ export default class IngredientDetails extends Component {
   }
   state = {};
 
+  handleCheck = ingredientName => {
+    const oldState = [...this.state.departmentIngredients];
+    const newState = oldState.map(item => {
+      if (item.IngredientName === ingredientName) {
+        item.isChecked = !item.isChecked;
+        return item;
+      }
+      return item;
+    });
+
+    this.setState({
+      departmentIngredients: newState,
+    });
+  };
+
   render() {
     return (
       <View style={styles.container}>
@@ -26,9 +43,11 @@ export default class IngredientDetails extends Component {
           data={this.state.departmentIngredients}
           renderItem={info => (
             <View>
-              <Text style={{ fontSize: 25, color: 'white', padding: 5 }}>
-                  {info.item.IngredientName}
-              </Text>
+              <CheckBox
+                title={info.item.IngredientName}
+                checked={info.item.isChecked}
+                onPress={() => this.handleCheck(info.item.IngredientName)}
+              />
             </View>
           )}
         />
