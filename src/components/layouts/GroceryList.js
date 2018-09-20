@@ -8,6 +8,7 @@ let tempName = '';
 class GroceryList extends Component {
   static navigationOptions = ({ navigation }) => {
     const { departments, name } = navigation.state.params.departmentNameArray;
+
     tempName = departments;
     return {
       title: name,

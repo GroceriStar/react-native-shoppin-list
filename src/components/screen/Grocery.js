@@ -6,24 +6,53 @@ import {
   FlatList,
   TouchableOpacity,
 } from 'react-native';
-import TouchableBounce from 'react-native/Libraries/Components/Touchable/TouchableBounce';
 import { createStackNavigator } from 'react-navigation';
+import { Button } from 'react-native-elements';
+
 import { getAllGrocery } from '../../HelperFunctions';
 import GroceryList from '../layouts/GroceryList';
+import CreateNewGrocery from '../layouts/CreateNewGrocry';
+import CreateIngredientsList from '../layouts/CreateIngredientsList';
+
+let newData = getAllGrocery();
 
 class Grocery extends Component {
-  static navigationOptions = {
-    header: null,
-    title: 'Grocery',
-    tabBarButtonComponent: TouchableBounce,
+  static navigationOptions = () => {
+    newData = getAllGrocery();
+    return {
+      header: null,
+      title: 'Grocery',
+    };
+  };
+
+  state = {
+    groceryList: newData,
+  };
+
+  refreshFunction = () => {
+    this.setState({
+      groceryList: getAllGrocery(),
+    });
   };
   render() {
     return (
       <View style={styles.container}>
+        <View>
+          <Button
+            large
+            onPress={() =>
+              this.props.navigation.navigate('createNewGrocery', {
+                refresh: this.refreshFunction,
+              })
+            }
+            icon={{ name: 'local-grocery-store', type: 'materialIcons' }}
+            title="CREATE NEW GROCERY"
+          />
+        </View>
         <FlatList
           onEndReached={this.handle}
           onEndReachedThreshold={0}
-          data={getAllGrocery()}
+          data={this.state.groceryList}
           renderItem={({ item }) => (
             <TouchableOpacity
               onPress={() =>
@@ -59,8 +88,12 @@ export default createStackNavigator(
   {
     grocery: { screen: Grocery },
     groceryList: { screen: GroceryList },
+    createNewGrocery: { screen: CreateNewGrocery },
+    createIngredientsList: { screen: CreateIngredientsList },
   },
   {
     initialRouteName: 'grocery',
+    title: 'Grocery',
+    headerMode: 'screen',
   }
 );

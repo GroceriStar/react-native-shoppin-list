@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
-import {
-  View,
-  StyleSheet,
-  FlatList,
-  TextInput,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
+import { View, StyleSheet, FlatList, Text } from 'react-native';
 import { CheckBox, Icon } from 'react-native-elements';
 import uuid from 'uuidv4';
 import underscore from 'underscore';
 
 import { getAllIngredientsList } from '../../HelperFunctions';
+import AddValueToList from './AddValueToList';
 
 let tempName = '';
+
 export default class IngredientDetails extends Component {
   static navigationOptions = ({ navigation }) => {
     const departmentName = navigation.state.params.departmentName;
@@ -122,36 +117,10 @@ export default class IngredientDetails extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <View style={styles.addIngredients}>
-          <View style={{ flex: 0.8 }}>
-            <TextInput
-              style={{
-                marginLeft: 5,
-                height: 35,
-                borderColor: 'gray',
-                borderWidth: 2,
-                padding: 4,
-              }}
-              onChangeText={text => this.handleOntextChange(text)}
-              value={this.state.addIngredientText}
-              placeholder="Add Ingredient..."
-            />
-          </View>
-          <View style={{ flex: 0.2 }}>
-            <TouchableOpacity>
-              <Icon
-                type="entypo"
-                name="add-to-list"
-                onPress={() =>
-                  this.handleAddIngredients(
-                    this.state.addIngredientText,
-                    'NEW_VALUE'
-                  )
-                }
-              />
-            </TouchableOpacity>
-          </View>
-        </View>
+        <AddValueToList
+          handleAddIngredients={this.handleAddIngredients}
+          handleOntextChange={this.handleOntextChange}
+        />
         {this.state.isAdding ? (
           <View>
             <FlatList
@@ -214,12 +183,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(242, 175, 82,0.8)',
     paddingTop: 15,
     paddingLeft: 30,
-  },
-  addIngredients: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 50,
   },
   addOldIngrdients: {
     flex: 1,
