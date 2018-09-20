@@ -1,6 +1,9 @@
 import gf from '@groceristar/groceristar-fetch/groceristar';
 import uuid from 'uuidv4';
 
+const getOldGrocery = gf.getGrocery();
+let newGrocery = getOldGrocery;
+
 export const getAllDepartmentList = () => {
   const newAllDepartments = gf.getAllDepartments();
   const newAllDepartmentsObject = newAllDepartments.map(item => ({
@@ -23,11 +26,11 @@ export const getAllIngredientsList = DeparmentName => {
 };
 
 export const getAllGrocery = () => {
-  const grocery = gf.getGrocery();
-  const GroceryObjectArray = grocery.map(item => ({
+  const GroceryObjectArray = newGrocery.map(item => ({
     key: uuid(),
     IngredientName: item,
   }));
+
   return GroceryObjectArray;
 };
 
@@ -38,4 +41,18 @@ export const getAllGroceryDepartment = departmentArray => {
     isChecked: false,
   }));
   return departmentArrayObject;
+};
+
+export const createNewGroceryList = newDepartment => {
+  const isAvailable = newGrocery.filter(item => {
+    if (item.name === newDepartment.name) {
+      return true;
+    }
+    return false;
+  });
+
+  if (isAvailable.length === 0) {
+    const newDepartmentList = [...newGrocery, newDepartment];
+    newGrocery = newDepartmentList;
+  }
 };
