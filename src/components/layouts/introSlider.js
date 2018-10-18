@@ -5,6 +5,7 @@ import { LinearGradient } from 'expo';
 
 export const introSlider = props => (
   <View>
+  {/* //@TODO move styles away */}
     <LinearGradient
       style={[
         styles.mainContent,
@@ -29,6 +30,7 @@ export const introSlider = props => (
               color={props.iconColors}
             />
           ) : (
+            {/* //@TODO move styles away */}
             <FontAwesome
               style={{ backgroundColor: 'transparent', fontSize: 300 }}
               name={props.icon}
@@ -43,6 +45,7 @@ export const introSlider = props => (
         </View>
       ) : (
         <View>
+        {/* //@TODO move styles away */}
           <Text
             style={[
               styles.title,
@@ -59,6 +62,7 @@ export const introSlider = props => (
           <FlatList
             data={props.textArray}
             renderItem={({ item }) => (
+              {/* //@TODO move styles away */}
               <LinearGradient
                 style={styles.extraTextGradient}
                 colors={['#6FC0F6', '#6FC0F6']}

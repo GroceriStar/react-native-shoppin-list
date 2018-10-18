@@ -11,6 +11,7 @@ import { Button } from 'react-native-elements';
 
 const { height: vh, width: vw } = Dimensions.get('window');
 
+//@TODO rename file and make sure it works fine
 class CreateNewGrocery extends Component {
   static navigationOptions = {
     title: 'New Grocery',

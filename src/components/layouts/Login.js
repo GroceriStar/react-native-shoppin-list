@@ -20,11 +20,13 @@ class Login extends Component {
           <Text style={styles.link}>Already have an account?</Text>
         </TouchableOpacity>
         <View style={styles.buttonOuterView}>
+        {/* //@TODO move styles away */}
           <Button
             title="Login"
             color="#FF5757"
             onPress={() => this.props.navigation.navigate('tab')}
           />
+          {/* //@TODO move styles away */}
           <Button title="Continue with Facebook" color="#3A5998" />
         </View>
       </View>

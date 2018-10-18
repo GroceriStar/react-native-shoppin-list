@@ -116,6 +116,7 @@ export default class IngredientDetails extends Component {
 
   render() {
     return (
+      {/* //@TODO move styles away */}
       <View style={{ flex: 1 }}>
         <AddValueToList
           handleAddIngredients={this.handleAddIngredients}
@@ -127,6 +128,7 @@ export default class IngredientDetails extends Component {
               data={this.state.searchFound}
               renderItem={({ item }) => (
                 <View style={[styles.addOldIngrdients]}>
+                {/* //@TODO move styles away */}
                   <View
                     style={{
                       flex: 0.9,
@@ -137,6 +139,7 @@ export default class IngredientDetails extends Component {
                   >
                     <Text>{item.IngredientName}</Text>
                   </View>
+                  {/* //@TODO move styles away */}
                   <View
                     style={{
                       flex: 0.1,

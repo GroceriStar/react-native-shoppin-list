@@ -20,7 +20,9 @@ class SignUP extends Component {
           <Text style={styles.link}>Don't have an account?</Text>
         </TouchableOpacity>
         <View style={styles.buttonOuterView}>
+          {/* //@TODO move styles away */}
           <Button title="Create Account" color="#FF5757" />
+          {/* //@TODO move styles away */}
           <Button title="Continue with Facebook" color="#3A5998" />
         </View>
       </View>
