@@ -23,7 +23,7 @@ const Button = ({ title, color, onPress }) => {
 			<TouchableNativeFeedback
 				background={TouchableNativeFeedback.Ripple('#fff', false)}
 				useForeground
-				onPress={() => { 
+				onPress={() => {
 					setTimeout(onPress, 500);
 				}}
 			>
@@ -31,7 +31,9 @@ const Button = ({ title, color, onPress }) => {
 			</TouchableNativeFeedback>
 		);
 	}
-	return <TouchableOpacity onPress={onPress}>{buttonComponent(title, color)}</TouchableOpacity>;
+	return <TouchableOpacity onPress={onPress}>
+					{buttonComponent(title, color)}
+				 </TouchableOpacity>;
 };
 
 const styles = StyleSheet.create({

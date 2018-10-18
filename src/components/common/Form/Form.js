@@ -13,6 +13,7 @@ export default class Form extends Component {
 
 	render() {
 		return (
+			{/* //@TODO move styles away */}
 			<View style={{ flex: 1, justifyContent: 'center' }}>
 				{this.login()}
 				<TextField text="e-mail address" />

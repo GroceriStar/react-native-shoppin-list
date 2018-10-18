@@ -5,6 +5,7 @@ const TextField = ({ text }) => (
 	<View>
 		<Text style={styles.textStyle}>{text}</Text>
 		<View style={styles.inputContainer}>
+		{/* //@TODO move styles away */}
 			<TextInput underlineColorAndroid="transparent" style={{ fontSize: 17 }} />
 		</View>
 	</View>
