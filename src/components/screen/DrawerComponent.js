@@ -44,6 +44,7 @@ class DrawerComponent extends Component {
                 })
               }
             >
+            {/*// @TODO move styles away */}
               <View style={{ backgroundColor: '#ffde9e', margin: 10 }}>
                 <Text style={{ padding: 10, backgroundColor: '#f4b942' }}>
                   {item.departmentName}
@@ -57,6 +58,8 @@ class DrawerComponent extends Component {
     );
   }
 }
+
+
 
 const styles = StyleSheet.create({
   container: {

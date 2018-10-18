@@ -22,6 +22,7 @@ class CreateNewGrocery extends Component {
   render() {
     return (
       <View style={styles.container}>
+      {/* //@TODO move styles away */}
         <ImageBackground
           style={{ opacity: 0.5, width: vw, height: vh }}
           source={{
@@ -29,12 +30,15 @@ class CreateNewGrocery extends Component {
               'http://www.finehomesandliving.com/San-Diego-Grocery-Delivery-Services/groceries.jpg',
           }}
         >
+        {/* //@TODO move styles away */}
           <View style={{ flex: 1, paddingTop: 125, opacity: 1 }}>
             <View style={{ alignItems: 'center' }}>
+            {/* //@TODO move styles away */}
               <Text style={{ fontSize: 30, fontWeight: '400' }}>
                 CreateNewGrocery
               </Text>
             </View>
+            {/* //@TODO move styles away */}
             <View style={{ paddingTop: 15 }}>
               <TextInput
                 maxLength={35}
@@ -43,7 +47,9 @@ class CreateNewGrocery extends Component {
                 value={this.state.groceryName}
               />
             </View>
+            {/* //@TODO move styles away */}
             <View style={{ paddingTop: 120 }}>
+            {/* //@TODO move styles away */}
               <Button
                 large
                 onPress={() => {
