@@ -20,7 +20,7 @@ class Login extends Component {
           <Text style={styles.link}>Already have an account?</Text>
         </TouchableOpacity>
         <View style={styles.buttonOuterView}>
-        {/* //@TODO move styles away */}
+          {/* //@TODO move styles away */}
           <Button
             title="Login"
             color="#FF5757"

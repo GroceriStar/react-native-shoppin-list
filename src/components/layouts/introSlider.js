@@ -29,7 +29,7 @@ export const introSlider = props => (
               color={props.iconColors}
             />
           ) : (
-            <FontAwesome 
+            <FontAwesome
               style={{ backgroundColor: 'transparent', fontSize: 300 }}
               name={props.icon}
               size={200}
