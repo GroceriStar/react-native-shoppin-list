@@ -19,40 +19,36 @@ class AddValueToList extends Component {
       }
     );
   };
+
+  handleOnPress = () => {
+    if (this.props.handleAddIngredients) {
+      this.props.handleAddIngredients(
+        this.state.addIngredientText,
+        'NEW_VALUE'
+      );
+      this.setState({
+        addIngredientText: '',
+      });
+    }
+  };
   render() {
     return (
       <View style={styles.addIngredients}>
-        <View style={{ flex: 0.8 }}>
+        <View style={styles.container}>
           <TextInput
-            style={{
-              marginLeft: 5,
-              height: 35,
-              borderColor: 'gray',
-              borderWidth: 2,
-              padding: 4,
-            }}
+            style={styles.textInput}
             onChangeText={text => this.handleText(text)}
             value={this.state.addIngredientText}
             placeholder="Add Ingredient..."
           />
         </View>
-        <View style={{ flex: 0.2 }}>
+        <View style={styles.buttonContainer}>
           <TouchableOpacity>
             <Icon
-              containerStyle={{ padding: 4 }}
+              containerStyle={styles.iconContainer}
               type="entypo"
               name="add-to-list"
-              onPress={() => {
-                if (this.props.handleAddIngredients) {
-                  this.props.handleAddIngredients(
-                    this.state.addIngredientText,
-                    'NEW_VALUE'
-                  );
-                  this.setState({
-                    addIngredientText: '',
-                  });
-                }
-              }}
+              onPress={() => this.handleOnPress()}
             />
           </TouchableOpacity>
         </View>
@@ -63,6 +59,16 @@ class AddValueToList extends Component {
 export default AddValueToList;
 
 const styles = StyleSheet.create({
+  inputContainer: { flex: 0.8 },
+  buttonContainer: { flex: 0.2 },
+  textInput: {
+    marginLeft: 5,
+    height: 35,
+    borderColor: 'gray',
+    borderWidth: 2,
+    padding: 4,
+  },
+  iconContainer: { padding: 4 },
   addIngredients: {
     flexDirection: 'row',
     justifyContent: 'center',

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 
-import { TextField } from '../TextField/TextField';
+import TextField from '../TextField/TextField';
 
 export default class Form extends Component {
   login = () => {
