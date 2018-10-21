@@ -116,7 +116,6 @@ export default class IngredientDetails extends Component {
 
   render() {
     return (
-      {/* //@TODO move styles away */}
       <View style={{ flex: 1 }}>
         <AddValueToList
           handleAddIngredients={this.handleAddIngredients}
