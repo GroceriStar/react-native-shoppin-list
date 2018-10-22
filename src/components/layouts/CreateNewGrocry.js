@@ -23,18 +23,17 @@ class CreateNewGrocery extends Component {
   render() {
     return (
       <View style={styles.container}>
-      {/* //@TODO move styles away */}
         <ImageBackground
-          style={{ opacity: 0.5, width: vw, height: vh }}
+          style={styles.imageBackground}
           source={{
             uri:
               'http://www.finehomesandliving.com/San-Diego-Grocery-Delivery-Services/groceries.jpg',
           }}
         >
-        {/* //@TODO move styles away */}
+          ]{' '}
           <View style={{ flex: 1, paddingTop: 125, opacity: 1 }}>
             <View style={{ alignItems: 'center' }}>
-            {/* //@TODO move styles away */}
+              ]{' '}
               <Text style={{ fontSize: 30, fontWeight: '400' }}>
                 CreateNewGrocery
               </Text>
@@ -50,7 +49,7 @@ class CreateNewGrocery extends Component {
             </View>
             {/* //@TODO move styles away */}
             <View style={{ paddingTop: 120 }}>
-            {/* //@TODO move styles away */}
+              {/* //@TODO move styles away */}
               <Button
                 large
                 onPress={() => {
@@ -78,6 +77,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  imageBackground: { opacity: 0.5, width: vw, height: vh },
   InputStyle: {
     color: '#000000',
     margin: 10,

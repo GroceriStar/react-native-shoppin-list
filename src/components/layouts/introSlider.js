@@ -43,19 +43,7 @@ export const introSlider = props => (
         </View>
       ) : (
         <View>
-          <Text
-            style={[
-              styles.title,
-              {
-                color: '#88C5EE',
-                marginVertical: 10,
-                borderBottomColor: '#88C5EE',
-                borderBottomWidth: 2,
-              },
-            ]}
-          >
-            Extra Features
-          </Text>
+          <Text style={[styles.title, styles.additional]}>Extra Features</Text>
           <FlatList
             data={props.textArray}
             renderItem={({ item }) => (
@@ -124,5 +112,11 @@ const styles = StyleSheet.create({
     fontSize: 23,
     backgroundColor: 'transparent',
     padding: 5,
+  },
+  additional: {
+    color: '#88C5EE',
+    marginVertical: 10,
+    borderBottomColor: '#88C5EE',
+    borderBottomWidth: 2,
   },
 });

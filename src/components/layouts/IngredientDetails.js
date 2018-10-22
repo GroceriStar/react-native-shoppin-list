@@ -127,25 +127,10 @@ export default class IngredientDetails extends Component {
               data={this.state.searchFound}
               renderItem={({ item }) => (
                 <View style={[styles.addOldIngrdients]}>
-                {/* //@TODO move styles away */}
-                  <View
-                    style={{
-                      flex: 0.9,
-                      marginLeft: 10,
-                      borderRightWidth: 2,
-                      borderRightColor: '#000',
-                    }}
-                  >
+                  <View style={styles.ingredientName}>
                     <Text>{item.IngredientName}</Text>
                   </View>
-                  {/* //@TODO move styles away */}
-                  <View
-                    style={{
-                      flex: 0.1,
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                    }}
-                  >
+                  <View style={styles.iconContainer}>
                     <Icon
                       type="MaterialIcons"
                       name="add"
@@ -193,5 +178,16 @@ const styles = StyleSheet.create({
     margin: 10,
     borderWidth: 2,
     borderColor: '#657287',
+  },
+  ingredientName: {
+    flex: 0.9,
+    marginLeft: 10,
+    borderRightWidth: 2,
+    borderRightColor: '#000',
+  },
+  iconContainer: {
+    flex: 0.1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
