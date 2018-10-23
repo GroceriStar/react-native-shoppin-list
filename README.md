@@ -38,29 +38,60 @@ User can:
 <img src="assets/SC.png">
 
 
-## Intro Component Video
 
-![introslide 1](https://user-images.githubusercontent.com/16745006/45135621-f6a8e800-b1bd-11e8-8aff-7586dab7d1fd.gif)
+
+
+
+
 ## Shopping list app videos
+
+- [Login, View Departments]()
+- [Login + View Departments List]()
+- [Introduction Screens]()
+- [Departments with Ingredients]()
+- [Departments List with Ingredients with checkboxes]()
+
+
+#### Introduction Screens
+
+
+#### Login, View Departments
+![List of Ingredients](https://github.com/GroceriStar/creative/blob/master/app-video/ingredients-list.gif)
 
 #### Login + View Departments List
 ![Ingredients](https://github.com/GroceriStar/creative/blob/master/app-video/Ingredients.gif)
 
 
-#### Departments List with Ingredients with checkboxes
-![Dep+ing](https://github.com/GroceriStar/creative/blob/master/app-video/departments-with-ingredients.gif)
+#### Introduction Screens
+![Introduction Slide](https://github.com/GroceriStar/creative/blob/master/app-video/introduction-slide.gif)
 
 
 #### Departments with Ingredients
 ![Grocery List](https://github.com/GroceriStar/creative/blob/master/app-video/grocery-list.gif)
 
 
-#### Login, View Departments
-![List of Ingredients](https://github.com/GroceriStar/creative/blob/master/app-video/ingredients-list.gif)
+#### Departments List with Ingredients with checkboxes
+![Dep+ing](https://github.com/GroceriStar/creative/blob/master/app-video/departments-with-ingredients.gif)
 
 
-#### Introduction Screens
-![Introduction Slide](https://github.com/GroceriStar/creative/blob/master/app-video/introduction-slide.gif)
+
+
+## Important Notes
+- We'll use [Sentry Releases](https://docs.sentry.io/learn/releases/) to ship better code
+- We'll use [git-flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) so we'll not intersect between developers
+- We'll use PR for pushing your code into master and I'll be a reviewer
+- We'll use [bin-flow](https://github.com/facebook/flow)
+- For making react components ready for cross-projects we'll use [Bit](https://bitsrc.io/).
+- We'll use [Jest + Enzyme for tests](https://facebook.github.io/jest/)
+- We'll use [Netlify](https://www.netlify.com/) in order to have ability review our pages online
+- We'll use [Travis CI](http://travis-ci.org) for setting up tests coverage
+- Send API calls to server. @TODO share with team an API endpoints. for making calls use Axious.
+- For subscription service we'll use [Paddle.js](https://paddle.com/docs/paddle-js-overlay-checkout/)
+
+- Each component should looks simple and understandable
+- We should use [ReactStrap](https://reactstrap.github.io/) components for faster development process
+- You should create and maintain documentation [GitBook](https://www.gitbook.com/)
+
 
 
 #### Departments, Ingredients with ids
