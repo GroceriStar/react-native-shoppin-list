@@ -45,37 +45,36 @@ User can:
 
 ## Shopping list app videos
 
-- [Login, View Departments]()
-- [Login + View Departments List]()
-- [Introduction Screens]()
-- [Departments with Ingredients]()
-- [Departments List with Ingredients with checkboxes]()
+- [Login, View Departments](#login-view-departments)
+- [Login + View Departments List](#login--view-departments-list)
+- [Introduction Screens](#introduction-screens-1)
+- [Departments with Ingredients](#departments-with-ingredients)
+- [Departments List with Ingredients with checkboxes](#departments-with-ingredients)
 
-
-#### Introduction Screens
 
 
 #### Login, View Departments
 ![List of Ingredients](https://github.com/GroceriStar/creative/blob/master/app-video/ingredients-list.gif)
 
+---
 #### Login + View Departments List
 ![Ingredients](https://github.com/GroceriStar/creative/blob/master/app-video/Ingredients.gif)
 
-
+---
 #### Introduction Screens
 ![Introduction Slide](https://github.com/GroceriStar/creative/blob/master/app-video/introduction-slide.gif)
 
-
+---
 #### Departments with Ingredients
 ![Grocery List](https://github.com/GroceriStar/creative/blob/master/app-video/grocery-list.gif)
 
-
+---
 #### Departments List with Ingredients with checkboxes
 ![Dep+ing](https://github.com/GroceriStar/creative/blob/master/app-video/departments-with-ingredients.gif)
 
 
 
-
+---
 ## Important Notes
 - We'll use [Sentry Releases](https://docs.sentry.io/learn/releases/) to ship better code
 - We'll use [git-flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) so we'll not intersect between developers
