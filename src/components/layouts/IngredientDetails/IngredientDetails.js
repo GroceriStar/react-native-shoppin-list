@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, FlatList, Text } from 'react-native';
+import { View, FlatList, Text } from 'react-native';
 import { CheckBox, Icon } from 'react-native-elements';
 import uuid from 'uuidv4';
 import underscore from 'underscore';
-
-import { getAllIngredientsList } from '../../HelperFunctions';
-import AddValueToList from './AddValueToList';
+import styles from './Styles';
+import { getAllIngredientsList } from '../../../HelperFunctions';
+import AddValueToList from '../AddValueToList/AddValueToList';
 
 let tempName = '';
 
@@ -127,23 +127,10 @@ export default class IngredientDetails extends Component {
               data={this.state.searchFound}
               renderItem={({ item }) => (
                 <View style={[styles.addOldIngrdients]}>
-                  <View
-                    style={{
-                      flex: 0.9,
-                      marginLeft: 10,
-                      borderRightWidth: 2,
-                      borderRightColor: '#000',
-                    }}
-                  >
+                  <View style={styles.ingredientName}>
                     <Text>{item.IngredientName}</Text>
                   </View>
-                  <View
-                    style={{
-                      flex: 0.1,
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                    }}
-                  >
+                  <View style={styles.iconContainer}>
                     <Icon
                       type="MaterialIcons"
                       name="add"
@@ -176,20 +163,3 @@ export default class IngredientDetails extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'rgba(242, 175, 82,0.8)',
-    paddingTop: 15,
-    paddingLeft: 30,
-  },
-  addOldIngrdients: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    margin: 10,
-    borderWidth: 2,
-    borderColor: '#657287',
-  },
-});

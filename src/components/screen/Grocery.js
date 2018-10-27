@@ -10,9 +10,9 @@ import { createStackNavigator } from 'react-navigation';
 import { Button } from 'react-native-elements';
 
 import { getAllGrocery } from '../../HelperFunctions';
-import GroceryList from '../layouts/GroceryList';
-import CreateNewGrocery from '../layouts/CreateNewGrocry';
-import CreateIngredientsList from '../layouts/CreateIngredientsList';
+import GroceryList from '../layouts/GroceryList/GroceryList';
+import CreateNewGrocery from '../layouts/CreateNewGrocry/CreateNewGrocry';
+import CreateIngredientsList from '../layouts/CreateIngredientsList/CreateIngredientsList';
 
 let newData = getAllGrocery();
 
@@ -34,6 +34,7 @@ class Grocery extends Component {
       groceryList: getAllGrocery(),
     });
   };
+
   render() {
     return (
       <View style={styles.container}>
@@ -61,6 +62,7 @@ class Grocery extends Component {
                 })
               }
             >
+             {/* //@TODO move styles away */}
               <View style={{ backgroundColor: '#ffde9e', margin: 10 }}>
                 <Text style={{ padding: 10, backgroundColor: '#f4b942' }}>
                   {item.IngredientName.name}

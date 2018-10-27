@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, FlatList } from 'react-native';
+import { View, FlatList } from 'react-native';
 import { CheckBox } from 'react-native-elements';
-
-import { getAllGroceryDepartment } from '../../HelperFunctions';
+import styles from './Styles';
+import { getAllGroceryDepartment } from '../../../HelperFunctions';
 
 let tempName = '';
 class GroceryList extends Component {
@@ -58,12 +58,3 @@ class GroceryList extends Component {
   }
 }
 export default GroceryList;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'rgba(242, 175, 82,0.8)',
-    paddingTop: 15,
-    paddingLeft: 30,
-  },
-});

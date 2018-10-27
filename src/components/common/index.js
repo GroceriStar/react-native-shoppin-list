@@ -1,7 +1,7 @@
 // index in common folder
-import TextField from './TextField';
-import Button from './Button';
-import Form from './Form';
-import Logo from './Logo';
+import TextField from './TextField/TextField';
+import Button from './Button/Button';
+import Form from './Form/Form';
+import Logo from './Logo/Logo';
 
 export { TextField, Button, Logo, Form };

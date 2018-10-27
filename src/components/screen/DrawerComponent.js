@@ -10,7 +10,7 @@ import TouchableBounce from 'react-native/Libraries/Components/Touchable/Touchab
 import { createStackNavigator } from 'react-navigation';
 
 import { getAllDepartmentList } from '../../HelperFunctions';
-import IngredientDetails from '../layouts/IngredientDetails';
+import IngredientDetails from '../layouts/IngredientDetails/IngredientDetails';
 
 class DrawerComponent extends Component {
   static navigationOptions = {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
-
-import { Button, Logo, Form } from '../common';
+import { View, TouchableOpacity, Text } from 'react-native';
+import styles from './Styles';
+import { Button, Logo, Form } from '../../common';
 
 class SignUP extends Component {
   static navigationOptions = {
@@ -20,35 +20,14 @@ class SignUP extends Component {
           <Text style={styles.link}>Don't have an account?</Text>
         </TouchableOpacity>
         <View style={styles.buttonOuterView}>
+          {/* //@TODO move styles away */}
           <Button title="Create Account" color="#FF5757" />
+          {/* //@TODO move styles away */}
           <Button title="Continue with Facebook" color="#3A5998" />
         </View>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#fff',
-    flex: 1,
-    paddingTop: 25,
-    paddingRight: 25,
-    paddingLeft: 25,
-
-    justifyContent: 'center',
-  },
-  buttonOuterView: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  link: {
-    textDecorationLine: 'underline',
-    color: '#4985FF',
-    alignSelf: 'center',
-    marginTop: 5,
-  },
-});
 
 export default SignUP;

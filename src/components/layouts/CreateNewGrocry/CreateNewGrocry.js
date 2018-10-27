@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Dimensions,
-  ImageBackground,
-} from 'react-native';
+import { View, Text, TextInput, ImageBackground } from 'react-native';
 import { Button } from 'react-native-elements';
+import styles from './Styles';
 
-const { height: vh, width: vw } = Dimensions.get('window');
-
+//@TODO rename file and make sure it works fine
 class CreateNewGrocery extends Component {
   static navigationOptions = {
     title: 'New Grocery',
@@ -23,7 +16,7 @@ class CreateNewGrocery extends Component {
     return (
       <View style={styles.container}>
         <ImageBackground
-          style={{ opacity: 0.5, width: vw, height: vh }}
+          style={styles.imageBackground}
           source={{
             uri:
               'http://www.finehomesandliving.com/San-Diego-Grocery-Delivery-Services/groceries.jpg',
@@ -66,21 +59,3 @@ class CreateNewGrocery extends Component {
   }
 }
 export default CreateNewGrocery;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  InputStyle: {
-    color: '#000000',
-    margin: 10,
-    paddingLeft: 8,
-    fontSize: 20,
-    fontWeight: '300',
-    borderRadius: 6,
-    height: 50,
-    backgroundColor: '#ffebcc',
-    borderColor: '#ff9900',
-    borderWidth: 4,
-  },
-});
