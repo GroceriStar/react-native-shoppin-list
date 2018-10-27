@@ -6,8 +6,8 @@ import {
 } from 'react-navigation';
 import { Ionicons } from '@expo/vector-icons';
 
-import Login from './Login';
-import SignUp from './SignUp';
+import Login from './Login/Login';
+import SignUp from './Signup/SignUp';
 import Home from '../screen/Home';
 import Grocery from '../screen/Grocery';
 import DrawerComponent from '../screen/DrawerComponent';

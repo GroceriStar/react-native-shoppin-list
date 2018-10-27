@@ -1,15 +1,8 @@
 /*eslint-disable no-underscore-dangle*/
 import React, { Component } from 'react';
-import {
-  View,
-  StyleSheet,
-  TextInput,
-  Button,
-  FlatList,
-  StatusBar,
-} from 'react-native';
-
-import ListItems from '../common';
+import { View, TextInput, Button, FlatList, StatusBar } from 'react-native';
+import styles from './Styles';
+import ListItems from '../../common';
 
 export default class Todo extends Component {
   constructor(props) {
@@ -67,42 +60,15 @@ export default class Todo extends Component {
         <FlatList
           style={{ flex: 1 }}
           data={this.state.dataSource}
-          renderItem={({ item, index }) => {
-            // console.log(item);
-            return (
-              <ListItems
-                rowData={item}
-                onPress={() => this.deleteOnPress(index)}
-              />
-            );
-          }}
+          renderItem={({ item, index }) => (
+            <ListItems
+              rowData={item}
+              onPress={() => this.deleteOnPress(index)}
+            />
+          )}
           keyExtractor={(item, index) => item}
         />
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#fff',
-    paddingTop: 25,
-  },
-  formView: {
-    borderBottomWidth: 1,
-    borderColor: '#ccc',
-    paddingBottom: 10,
-    paddingTop: 15,
-  },
-  inputForm: {
-    backgroundColor: '#fff',
-    width: 320,
-    height: 40,
-    padding: 8,
-    marginBottom: 10,
-    marginTop: 10,
-  },
-});

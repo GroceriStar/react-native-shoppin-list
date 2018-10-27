@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
+import styles from './Styles';
 
-import { Button, Logo, Form } from '../common';
+import { Button, Logo, Form } from '../../common';
 
 class Login extends Component {
   static navigationOptions = {
@@ -33,26 +34,5 @@ class Login extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#fff',
-    flex: 1,
-    width: '100%',
-    padding: 25,
-    justifyContent: 'center',
-  },
-  buttonOuterView: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  link: {
-    textDecorationLine: 'underline',
-    color: '#4985FF',
-    alignSelf: 'center',
-    marginTop: 5,
-  },
-});
 
 export default Login;

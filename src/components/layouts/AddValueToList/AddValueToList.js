@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
+import { View, TouchableOpacity, TextInput } from 'react-native';
 import { Icon } from 'react-native-elements';
+import styles from './Styles';
 
 class AddValueToList extends Component {
   state = {
@@ -57,22 +58,3 @@ class AddValueToList extends Component {
   }
 }
 export default AddValueToList;
-
-const styles = StyleSheet.create({
-  inputContainer: { flex: 0.8 },
-  buttonContainer: { flex: 0.2 },
-  textInput: {
-    marginLeft: 5,
-    height: 35,
-    borderColor: 'gray',
-    borderWidth: 2,
-    padding: 4,
-  },
-  iconContainer: { padding: 4 },
-  addIngredients: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 50,
-  },
-});
