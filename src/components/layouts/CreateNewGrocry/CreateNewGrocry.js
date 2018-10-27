@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Dimensions,
-  ImageBackground,
-} from 'react-native';
+import { View, Text, TextInput, ImageBackground } from 'react-native';
 import { Button } from 'react-native-elements';
-
-const { height: vh, width: vw } = Dimensions.get('window');
+import styles from './Styles';
 
 //@TODO rename file and make sure it works fine
 class CreateNewGrocery extends Component {
@@ -23,23 +15,19 @@ class CreateNewGrocery extends Component {
   render() {
     return (
       <View style={styles.container}>
-      {/* //@TODO move styles away */}
         <ImageBackground
-          style={{ opacity: 0.5, width: vw, height: vh }}
+          style={styles.imageBackground}
           source={{
             uri:
               'http://www.finehomesandliving.com/San-Diego-Grocery-Delivery-Services/groceries.jpg',
           }}
         >
-        {/* //@TODO move styles away */}
           <View style={{ flex: 1, paddingTop: 125, opacity: 1 }}>
             <View style={{ alignItems: 'center' }}>
-            {/* //@TODO move styles away */}
               <Text style={{ fontSize: 30, fontWeight: '400' }}>
                 CreateNewGrocery
               </Text>
             </View>
-            {/* //@TODO move styles away */}
             <View style={{ paddingTop: 15 }}>
               <TextInput
                 maxLength={35}
@@ -48,9 +36,7 @@ class CreateNewGrocery extends Component {
                 value={this.state.groceryName}
               />
             </View>
-            {/* //@TODO move styles away */}
             <View style={{ paddingTop: 120 }}>
-            {/* //@TODO move styles away */}
               <Button
                 large
                 onPress={() => {
@@ -73,21 +59,3 @@ class CreateNewGrocery extends Component {
   }
 }
 export default CreateNewGrocery;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  InputStyle: {
-    color: '#000000',
-    margin: 10,
-    paddingLeft: 8,
-    fontSize: 20,
-    fontWeight: '300',
-    borderRadius: 6,
-    height: 50,
-    backgroundColor: '#ffebcc',
-    borderColor: '#ff9900',
-    borderWidth: 4,
-  },
-});

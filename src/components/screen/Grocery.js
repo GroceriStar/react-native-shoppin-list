@@ -10,9 +10,9 @@ import { createStackNavigator } from 'react-navigation';
 import { Button } from 'react-native-elements';
 
 import { getAllGrocery } from '../../HelperFunctions';
-import GroceryList from '../layouts/GroceryList';
-import CreateNewGrocery from '../layouts/CreateNewGrocry';
-import CreateIngredientsList from '../layouts/CreateIngredientsList';
+import GroceryList from '../layouts/GroceryList/GroceryList';
+import CreateNewGrocery from '../layouts/CreateNewGrocry/CreateNewGrocry';
+import CreateIngredientsList from '../layouts/CreateIngredientsList/CreateIngredientsList';
 
 let newData = getAllGrocery();
 

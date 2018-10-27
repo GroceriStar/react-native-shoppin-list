@@ -10,7 +10,7 @@ import TouchableBounce from 'react-native/Libraries/Components/Touchable/Touchab
 import { createStackNavigator } from 'react-navigation';
 
 import { getAllDepartmentList } from '../../HelperFunctions';
-import IngredientDetails from '../layouts/IngredientDetails';
+import IngredientDetails from '../layouts/IngredientDetails/IngredientDetails';
 
 class DrawerComponent extends Component {
   static navigationOptions = {
@@ -44,7 +44,6 @@ class DrawerComponent extends Component {
                 })
               }
             >
-            {/*// @TODO move styles away */}
               <View style={{ backgroundColor: '#ffde9e', margin: 10 }}>
                 <Text style={{ padding: 10, backgroundColor: '#f4b942' }}>
                   {item.departmentName}
@@ -58,8 +57,6 @@ class DrawerComponent extends Component {
     );
   }
 }
-
-
 
 const styles = StyleSheet.create({
   container: {

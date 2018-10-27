@@ -3,7 +3,7 @@ import AppIntroSlider from 'react-native-app-intro-slider';
 import { NativeRouter } from 'react-router-native';
 import { slides } from './src/default_data/introSliderData';
 import Main from './src/Main';
-import { introSlider } from './src/components/layouts/introSlider';
+import { introSlider } from './src/components/layouts/IntroSlider/introSlider';
 
 export default class App extends React.Component {
   state = {

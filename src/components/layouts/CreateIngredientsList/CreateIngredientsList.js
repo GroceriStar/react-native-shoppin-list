@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import {
   View,
   Text,
-  StyleSheet,
   FlatList,
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
 import uuid from 'uuidv4';
 
-import AddValueToList from './AddValueToList';
-import { createNewGroceryList } from '../../HelperFunctions';
+import AddValueToList from '../AddValueToList/AddValueToList';
+import { createNewGroceryList } from '../../../HelperFunctions';
+import styles from './Styles';
 
 let tempName = '';
 
@@ -20,7 +20,7 @@ class CreateIngredientsList extends Component {
     tempName = groceryName;
 
     return {
-      title: 'Creat Ingredients List',
+      title: 'Create Ingredients List',
     };
   };
 
@@ -72,55 +72,25 @@ class CreateIngredientsList extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <TouchableOpacity onPress={this.handleSendData}>
-          <View
-            style={{
-              backgroundColor: '#73e600',
-              borderRadius: 5,
-              margin: 10,
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Text style={{ color: '#fff', padding: 5, fontSize: 20 }}>
-              Save
-            </Text>
-          </View>
+        <TouchableOpacity
+          style={styles.saveButtonContainer}
+          onPress={this.handleSendData}
+        >
+          <Text style={styles.saveButtonText}>Save</Text>
         </TouchableOpacity>
 
-        <View style={{ margin: 10, borderColor: '#ff9900', borderWidth: 3 }}>
-          <View style={{ backgroundColor: '#ff7733', padding: 10 }}>
-            <Text style={{ color: '#331100', fontSize: 20, fontWeight: '400' }}>
-              Grocery Name
-            </Text>
+        <View style={styles.groceryTable}>
+          <View style={styles.tableKey}>
+            <Text style={styles.tableKeyText}>Grocery Name</Text>
           </View>
-          <View style={{ backgroundColor: '#ffccb3', padding: 10 }}>
-            <Text style={{ color: '#331100', fontSize: 15 }}>
-              {this.state.grocerName}
-            </Text>
+          <View style={styles.tableValue}>
+            <Text style={styles.tableValueText}>{this.state.grocerName}</Text>
           </View>
         </View>
-
-        <View>
-          <AddValueToList handleAddIngredients={this.handleAddIngredients} />
-        </View>
-
-        <View
-          style={{
-            height: 330,
-            margin: 5,
-          }}
-        >
-          <View style={{ backgroundColor: '#ff7733', padding: 10 }}>
-            <Text
-              style={{
-                color: '#331100',
-                fontSize: 20,
-                fontWeight: '400',
-              }}
-            >
-              Ingrdients Name
-            </Text>
+        <AddValueToList handleAddIngredients={this.handleAddIngredients} />
+        <View style={styles.ingredientsTable}>
+          <View style={styles.ingredientsKey}>
+            <Text style={styles.ingredientsKeyText}>Ingredients Name</Text>
           </View>
 
           {this.state.localDeparmentName.length !== 0 ? (
@@ -128,20 +98,8 @@ class CreateIngredientsList extends Component {
               <FlatList
                 data={this.state.localDeparmentName}
                 renderItem={({ item }) => (
-                  <View
-                    style={{
-                      margin: 10,
-                      backgroundColor: '#ffcc99',
-                      padding: 10,
-                    }}
-                  >
-                    <Text
-                      style={{
-                        color: '#331100',
-                        fontSize: 15,
-                        fontWeight: '300',
-                      }}
-                    >
+                  <View style={styles.localDeptContainer}>
+                    <Text style={styles.localDeptContainerText}>
                       {item.name}
                     </Text>
                   </View>
@@ -155,7 +113,3 @@ class CreateIngredientsList extends Component {
   }
 }
 export default CreateIngredientsList;
-
-const styles = StyleSheet.create({
-  container: {},
-});
