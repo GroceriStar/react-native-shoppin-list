@@ -7,7 +7,9 @@
 [:(Article]()
 
 [Documentation website](https://groceristar.github.io/documentation/)
+
 [Sitemap](https://groceristar.github.io/documentation/docs/gs-sitemap.html)
+
 [Screens from web version](https://groceristar.github.io/documentation/docs/gs-shoplist-screens.html)
 
 #### Overview
