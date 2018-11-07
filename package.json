@@ -10,7 +10,7 @@
     "@groceristar/groceristar-fetch": "^1.1.29",
     "expo": "^30.0.1",
     "raven-js": "^3.27.0",
-    "react": "16.5.2",
+    "react": "16.6.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
     "react-native-app-intro": "^1.1.5",
     "react-native-app-intro-slider": "^1.0.1",
