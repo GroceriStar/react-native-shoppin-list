@@ -938,9 +938,9 @@
     lodash "^4.17.10"
     uuid "3.3.2"
 
-"@react-navigation/core@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-3.0.0.tgz#042c7fcb99331d7b452868d129b4e1cc3a4c60b9"
+"@react-navigation/core@3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-3.0.1.tgz#9c513c65ae64aa8dee2777f66f547d488905140b"
   dependencies:
     create-react-context "^0.2.3"
     hoist-non-react-statics "^3.0.1"
@@ -949,9 +949,9 @@
     react-is "^16.5.2"
     react-lifecycles-compat "^3.0.4"
 
-"@react-navigation/native@3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-3.0.2.tgz#3365846d54f7e0cf4a7e6bc9b5ef574bfe6774ce"
+"@react-navigation/native@3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-3.0.3.tgz#6b1a6e15cde719e6c932bd78b23fa1417f6c0cab"
   dependencies:
     hoist-non-react-statics "^3.0.1"
     react-native-gesture-handler "^1.0.0"
@@ -5242,12 +5242,12 @@ react-navigation-tabs@1.0.1:
     react-lifecycles-compat "^3.0.4"
     react-native-tab-view "^1.0.0"
 
-react-navigation@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-3.0.4.tgz#2e2cf5bde077f9427b11223014ca604c0528758c"
+react-navigation@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-3.0.5.tgz#287cf7007c473bc73c6adb9a44b5737162ccd4d3"
   dependencies:
-    "@react-navigation/core" "3.0.0"
-    "@react-navigation/native" "3.0.2"
+    "@react-navigation/core" "3.0.1"
+    "@react-navigation/native" "3.0.3"
     react-navigation-drawer "1.0.4"
     react-navigation-stack "1.0.4"
     react-navigation-tabs "1.0.1"
