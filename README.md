@@ -4,7 +4,8 @@
 #### Table of contents
 [Trello Board](https://trello.com/b/n2ufANiO/groceristar-app)
 
-[:(Article]()
+[Basic requirements for React Native app](https://medium.com/quick-code/basic-requirements-for-react-native-app-8820067e1c50)
+[GroceriStar — React Native developers onboarding](https://medium.com/groceristar/groceristar-react-native-developers-onboarding-a310cb812ae7)
 
 [Documentation website](https://groceristar.github.io/documentation/)
 
