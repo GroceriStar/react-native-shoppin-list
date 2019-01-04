@@ -930,9 +930,9 @@
     pouchdb-collections "^1.0.1"
     tiny-queue "^0.2.1"
 
-"@groceristar/groceristar-fetch@^1.1.33":
-  version "1.1.33"
-  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-1.1.33.tgz#290dc7abe64852b084da1e874df70f4394f8ee76"
+"@groceristar/groceristar-fetch@^1.1.36":
+  version "1.1.36"
+  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-1.1.36.tgz#6e08699392cd83d343e12dc6469bd6f337bb3de0"
   dependencies:
     fs "0.0.1-security"
     lodash "^4.17.10"
