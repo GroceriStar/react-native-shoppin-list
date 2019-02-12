@@ -5690,10 +5690,6 @@ setprototypeof@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/setprototypeof/-/setprototypeof-1.1.0.tgz#d0bd85536887b6fe7c0d818cb962d9d91c54e656"
 
-sha-1@0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/sha-1/-/sha-1-0.1.1.tgz#2a39304bf41bbab11dd9efb7474ec25b1a92c257"
-
 shebang-command@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/shebang-command/-/shebang-command-1.2.0.tgz#44aac65b695b03398968c39f363fee5deafdf1ea"
@@ -6149,11 +6145,10 @@ uuid@3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
 
-uuidv4@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/uuidv4/-/uuidv4-2.0.0.tgz#3ec764288f9e9c4e40f8027ad309c2c528be2976"
+uuidv4@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/uuidv4/-/uuidv4-3.0.1.tgz#31751b0ab78f50c9e42dbf231693210b3435b673"
   dependencies:
-    sha-1 "0.1.1"
     uuid "3.3.2"
 
 validate-npm-package-license@^3.0.1:
