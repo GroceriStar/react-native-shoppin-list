@@ -913,7 +913,13 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@expo/vector-icons@^8.0.0", "@expo/vector-icons@^8.1.0":
+"@expo/vector-icons@^10.0.3":
+  version "10.0.3"
+  resolved "https://registry.yarnpkg.com/@expo/vector-icons/-/vector-icons-10.0.3.tgz#9dec25cf6c29871f2bb1fe932029878c221f1f75"
+  dependencies:
+    lodash "^4.17.4"
+
+"@expo/vector-icons@^8.0.0":
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/@expo/vector-icons/-/vector-icons-8.1.0.tgz#2a70d8d4a8b74f275063bcb2087e8b276a579955"
   dependencies:
