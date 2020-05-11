@@ -8,7 +8,7 @@
   "dependencies": {
     "@expo/vector-icons": "^8.1.0",
     "@groceristar/groceristar-fetch": "^1.1.33",
-    "expo": "^31.0.6",
+    "expo": "^37.0.9",
     "raven-js": "^3.27.0",
     "react": "16.7.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
