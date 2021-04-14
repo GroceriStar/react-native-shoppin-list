@@ -24,7 +24,7 @@
     "uuidv4": "^2.0.0"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-prettier": "^8.2.0",
     "eslint-config-rallycoding": "^3.2.0",
     "eslint-plugin-prettier": "^3.0.1",
     "prettier": "^1.15.3"
