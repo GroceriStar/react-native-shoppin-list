@@ -1,0 +1,34 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "07:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: expo
+    versions:
+    - 40.0.1
+    - 41.0.0
+  - dependency-name: eslint-config-prettier
+    versions:
+    - 7.2.0
+    - 8.0.0
+    - 8.1.0
+    - 8.2.0
+  - dependency-name: react-native-vector-icons
+    versions:
+    - 8.0.0
+  - dependency-name: "@expo/vector-icons"
+    versions:
+    - 12.0.3
+  - dependency-name: uuidv4
+    versions:
+    - 6.2.6
+  - dependency-name: react-navigation
+    versions:
+    - 4.4.3
+  - dependency-name: react
+    versions:
+    - 17.0.1
